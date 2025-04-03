@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Sidebar from "./components/Sidebar";
+import MusicList from "./components/MusicList";
+import Player from "./components/Player";
+import Favorites from "./components/Favorites";
+import RecentlyPlayed from "./components/RecentlyPlayed";
+import "./styles/App.scss";
 
-function App() {
+const App = () => {
+  const [activeSection, setActiveSection] = useState("For You");
+  const [currentSong, setCurrentSong] = useState(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <Sidebar setActiveSection={setActiveSection} />
+      <div className="content">
+        {activeSection === "For You" && <MusicList setCurrentSong={setCurrentSong} />}
+        {activeSection === "Favourites" && <Favorites setCurrentSong={setCurrentSong} />}
+        {activeSection === "Recently Played" && <RecentlyPlayed setCurrentSong={setCurrentSong} />}
+      </div>
+      {currentSong && <Player song={currentSong} />}
     </div>
   );
-}
+};
 
 export default App;

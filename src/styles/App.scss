@@ -1,0 +1,17 @@
+body {
+    background: linear-gradient(to right, #1e1e1e, #121212);
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  .app-container {
+    display: flex;
+    height: 100vh;
+    background: linear-gradient(120deg, #1e1e1e, #121212);
+    color: white;
+  }
+  
+  .content {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+  }

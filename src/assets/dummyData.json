@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Starboy",
+    "artistName": "The Weeknd",
+    "thumbnail": "/assets/starboy.jpeg",
+    "audio": "starboy.mp3"
+  },
+  {
+    "title": "Mouth of the River",
+    "artistName": "Imagine Dragons",
+    "thumbnail": "/assets/mouth-of-the-river.jpeg",
+    "audio": "mouth-of-the-river.mp3"
+  }
+]

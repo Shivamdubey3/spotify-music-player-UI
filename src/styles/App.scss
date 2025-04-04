@@ -6,7 +6,7 @@ body {
   .app-container {
     display: flex;
     height: 100vh;
-    background: linear-gradient(120deg, #1e1e1e, #121212);
+    background: linear-gradient(120deg, #000000, #000000);
     color: white;
   }
   
@@ -15,3 +15,49 @@ body {
     flex: 1;
     padding: 20px;
   }
+  @media (max-width: 768px) {
+    .app {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .player-container {
+      width: 100%;
+    }
+  }
+  .sidebar {
+    width: 230px; /* Adjust for better balance */
+    background: #000000;
+    padding: 20px;
+  }
+  
+  .sidebar ul {
+    list-style: none; /* Removes bullets */
+    padding: 0;
+  }
+  
+  .sidebar li {
+    padding: 12px 0;
+    font-size: 16px;
+  }
+  ::-webkit-scrollbar {
+    width: 5px; /* Makes scrollbar thinner */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #555; /* Slightly visible */
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #777;
+  }
+  
+  body {
+    overflow: hidden; /* Prevents outer scrollbar */
+  }
+    
